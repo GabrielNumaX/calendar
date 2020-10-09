@@ -33,7 +33,7 @@
     margin: 0;
     border: 0;
     outline: none;
-    color: $greenDarker;
+    // color: $greenDarker;
   }
   .react-calendar button:enabled:hover {
     cursor: pointer;
@@ -41,10 +41,13 @@
   .react-calendar__navigation {
     height: 44px;
     margin-bottom: 1em;
+    
+    
   }
   .react-calendar__navigation button {
     min-width: 44px;
     background: none;
+    color: $greenDarker;
   }
   .react-calendar__navigation button:enabled:hover,
   .react-calendar__navigation button:enabled:focus {
@@ -90,6 +93,7 @@
     text-align: center;
     padding: 0.75em 0.5em;
     background: none;
+    color: $greenDarker;
   }
   .react-calendar__tile:disabled {
     background-color: #f0f0f0;
@@ -125,4 +129,8 @@
   .react-calendar--selectRange .react-calendar__tile--hover {
     background-color: #e6e6e6;
   }
-  
+
+  .SelectedTile {
+    color: $blueNumbers;
+    background:$greenLight;
+  }

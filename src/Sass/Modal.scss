@@ -1,0 +1,91 @@
+@import 'Constants';
+ 
+ 
+ .Modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .ModalContent {
+    background-color:  rgb(156, 156, 156);
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 0 20px 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .CloseDiv {
+        width: 100%;
+  
+        .Close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+
+          &:hover,
+          &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          } 
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: $background;
+        padding: 20px 30px 20px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 10px;
+
+            label {
+                color: $greenLight;
+                margin-bottom: 5px;
+            }
+
+            input {
+                padding: 4px 12px;
+            }
+
+            p {
+                color: $pink;
+                font-weight: 600;;
+            }
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            border: none;
+            background-color: $greenLight;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: $blueCircle;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+  }
+  
+
+  
+  
+  
+ 
