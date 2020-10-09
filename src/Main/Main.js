@@ -179,27 +179,14 @@ class Main extends Component {
 
         let time = new Date();
 
-        let hours = time.getHours();
 
-        let minutes = time.getMinutes();
+        let timeStr = time.toString();
 
-        let amPm = '';
+        timeStr = timeStr.split(' ');
 
-        if(hours < 12) {
+        let country = timeStr[6].split('(');
 
-            amPm = 'am';
-        }
-        else {
-            amPm = 'pm';
-        }
-
-        time = time.toString();
-
-        time = time.split(' ');
-
-        let country = time[6].split('(');
-
-        this.setState({timeToShow: `${country[1]} (${hours}:${minutes}${amPm})`});
+        this.setState({timeToShow: `${country[1]} (${format(time, 'p')})`});
     }
  
     onChange = (date) => {
@@ -230,7 +217,7 @@ class Main extends Component {
             const sessions = this.state.sessionsToShow.map((item, pos) => {
 
                 return(
-                    <div className="SessionCard" key={pos} onClick={() => this.setState({showModal:true})}>
+                    <div className="SessionCard" key={pos} >
                         <div className="TimeAndDuration">
 
                             <h4>
@@ -244,7 +231,12 @@ class Main extends Component {
 
                             <h4>{item.title}</h4>
                             
-                            <h5>{item.fee}</h5>
+                            <div className="DivFee">
+                                <h5>{item.fee}</h5>
+
+                                <button onClick={() => this.setState({showModal:true})}>Register</button>
+                            </div>
+                            
 
                         </div>
                     </div>
@@ -286,9 +278,7 @@ class Main extends Component {
                     <Calendar
                         onChange={this.onChange}
                         value={this.state.date}
-                        // selectRange={true}
                         showNeighboringMonth={false}
-                        // tileDisabled={({activeStartDate, date, view }) => date.getDay() === 0}
                         tileClassName={this.tileClassName}
                     />
 

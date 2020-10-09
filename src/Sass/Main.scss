@@ -73,6 +73,24 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
+
+                    .DivFee {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        button {
+                            background-color: $greenLight;
+                            color: $background;
+                            border: none;
+                            padding: 4px 8px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
                     
                 }
 
@@ -90,4 +108,133 @@
             color: $greenDarker;
         }
     }
+}
+
+@media (max-width: 380px) {
+
+    
+.Main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: $background;
+
+    .Left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 10px 20px 20px;
+        width: 100%;
+        height: 350px;
+        border-right: none;
+        border-bottom: 1px solid rgb(156, 156, 156);
+        .Yoga {
+            width: 60px;
+            height: 60px;
+            font-size: 12px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .Session {
+            width: 100%;
+            height: 180px;
+            background-color: rgb(218, 218, 218);
+            padding: 4px 10px;
+            overflow-y: scroll;
+
+            h3 {
+                color: $pink;
+                font-size: 14px;
+            }
+
+            .SessionCard {
+                width: 100%;
+                background-color: whitesmoke;
+                min-height: 50px;
+                display: flex;
+                margin: 4px 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .TimeAndDuration {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding: 4px 8px;
+                    width: 30%;
+                    border-right: 1px solid $pink;
+
+                    h4 {
+                        font-size: 12px;
+                    }
+
+                    h5 {
+                        font-size: 10px;
+                    }
+                }
+
+                .Description {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 0 12px 0 12px;
+
+                    h4 {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 12px;
+                    }
+
+                    .DivFee {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h5 {
+                            font-size: 10px;
+                        }
+
+                        button {
+                            font-size: 12px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+    .Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+        } 
+        
+        p {
+            font-size: 12px;
+            margin-top: 12px;
+        }
+    }
+}
+
+
 }
