@@ -1,0 +1,81 @@
+@import 'Constants';
+
+.Main {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: $background;
+
+    .Left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 40px;
+        width: 400px;
+        border-right: 1px solid rgb(156, 156, 156);
+
+        .Yoga {
+            background-color: whitesmoke;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: $greenLight;
+        }
+
+        .Session {
+            width: 330px;
+            height: 180px;
+            background-color: rgb(218, 218, 218);
+            padding: 4px 20px;
+            overflow-y: scroll;
+
+            h3 {
+                color: $pink;
+            }
+
+            .SessionCard {
+                width: 100%;
+                background-color: whitesmoke;
+                height: 60px;
+                display: flex;
+                margin: 4px 0;
+
+                .TimeAndDuration {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding: 4px 8px;
+                    width: 30%;
+                    border-right: 1px solid $pink;
+                }
+
+                .Description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 0 0 0 20px;
+                }
+
+            }
+        }
+    }
+
+    .Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+
+        h2, p {
+            color: $greenDarker;
+        }
+    }
+}
